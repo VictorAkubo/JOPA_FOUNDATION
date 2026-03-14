@@ -2,7 +2,7 @@ import React from 'react';
 
 const LettersOfHope = () => {
   return (
-    <section className="py-32 bg-[#05070a] relative overflow-hidden">
+    <section id="hope" className="py-32 bg-[#05070a] relative overflow-hidden">
       {/* Background Decorative Element */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-900/5 rounded-full blur-[120px] pointer-events-none" />
 

@@ -8,7 +8,7 @@ const Invitation = () => {
   const mailtoUrlForPartnership = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
   return (
-    <section className="py-24 px-6 bg-[#05070a]">
+    <section id="invitation" className="py-24 px-6 bg-[#05070a]">
       <div className="max-w-5xl mx-auto p-12 md:p-20 rounded-[3rem] bg-gradient-to-br from-orange-950/20 to-transparent border border-orange-900/20 relative overflow-hidden text-center">
         <div className="relative z-10">
           <div className="flex justify-center mb-8 text-orange-500">

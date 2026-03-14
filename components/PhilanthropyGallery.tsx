@@ -54,7 +54,7 @@ const PhilanthropyGallery = () => {
   };
 
   return (
-    <section className="py-24 bg-[#05070a] text-white overflow-hidden min-h-screen">
+    <section id="gallery" className="py-24 bg-[#05070a] text-white overflow-hidden min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Header Section */}

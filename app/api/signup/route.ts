@@ -1,5 +1,5 @@
 import {NextResponse} from "next/server"
-import AuthSchema from "../../../models/Users.ts"
+import AuthSchema from "../../../models/Users"
 
 let userauth = []
 

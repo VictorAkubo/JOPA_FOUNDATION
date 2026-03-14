@@ -1,7 +1,7 @@
 import React from "react";
 import { Heart, Handshake, Users, ArrowRight } from "lucide-react";
-import EmailLink from "./Button.tsx"
-import Button from "./Button.tsx"
+import EmailLink from "./Button"
+import Button from "./Button"
 
 const HowYouCanHelp = () => {
   const email = "jopafoundation1@gmail.com";
@@ -34,7 +34,7 @@ const HowYouCanHelp = () => {
   ];
 
   return (
-    <section className="py-28 bg-[#05070a] relative overflow-hidden">
+    <section id="support" className="py-28 bg-[#05070a] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Section Header */}

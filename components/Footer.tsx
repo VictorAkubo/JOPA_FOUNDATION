@@ -1,19 +1,18 @@
 import React from 'react';
-import { Heart, Instagram, Mail, Phone, MapPin, Utensils } from 'lucide-react';
+import { Heart, Instagram,Facebook,Twitter, Mail, Phone, MapPin, Utensils } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#05070a] pt-24 pb-12 border-t border-white/5 text-white">
+    <footer id="footer" className="bg-[#05070a] pt-24 pb-12 border-t border-white/5 text-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-7 gap-16 mb-20">
           
           {/* Brand & Mission */}
           <div className="md:col-span-5">
             <div className="flex items-center gap-3 text-orange-600 mb-8">
-              <Utensils size={24} />
-              <span className="uppercase tracking-[0.4em] text-sm font-black">JOPA Foundation</span>
+            <img src="/jopa.jpg" className="rounded-full w-10 h-10" />  <span className="uppercase tracking-[0.4em] text-sm font-black">JOPA Foundation</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-light leading-snug mb-8 tracking-tight">
               We share love, <br /> 
@@ -61,6 +60,12 @@ const Footer = () => {
             <div className="flex gap-4">
               <a href="#" className="p-4 rounded-2xl bg-white/5 border border-white/10 text-slate-400 hover:text-orange-500 hover:border-orange-500/50 transition-all transform hover:-translate-y-1">
                 <Instagram size={20} />
+              </a>
+                            <a href="https://www.facebook.com/share/1CJeZ9ANyC/" className="p-4 rounded-2xl bg-white/5 border border-white/10 text-slate-400 hover:text-orange-500 hover:border-orange-500/50 transition-all transform hover:-translate-y-1">
+                <Facebook size={20} />
+              </a>
+                            <a href="#" className="p-4 rounded-2xl bg-white/5 border border-white/10 text-slate-400 hover:text-orange-500 hover:border-orange-500/50 transition-all transform hover:-translate-y-1">
+                <Twitter size={20} />
               </a>
               <a href="#" className="p-4 rounded-2xl bg-white/5 border border-white/10 text-slate-400 hover:text-orange-500 hover:border-orange-500/50 transition-all transform hover:-translate-y-1">
                 <Heart size={20} />

@@ -55,7 +55,7 @@ const ExecutiveBoard = () => {
       role: "Location Organizer", 
       name: "Iko-Ojo Blessing Adejoh", 
       desc: "Upholding the pillar of transparency and trust in every shared gift.",
-      image: "/faithmember.jpg" 
+      image: "/ikomember.jpg" 
     },
     { 
       role: "Member", 
@@ -86,12 +86,12 @@ const ExecutiveBoard = () => {
       role: "Member", 
       name: "Faith Ojo-Chegbe Itanyi", 
       desc: "Upholding the pillar of transparency and trust in every shared gift.",
-      image: "/faithmember.jpg" 
+      image: "/faithitanyimember.jpg" 
     },
   ];
 
   return (
-    <section ref={boardRef} className="py-32 bg-[#05070a] relative overflow-hidden">
+    <section id="leadership" ref={boardRef} className="py-32 bg-[#05070a] relative overflow-hidden">
       {/* Subtle ambient light */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-900/5 rounded-full blur-[120px] pointer-events-none" />
 

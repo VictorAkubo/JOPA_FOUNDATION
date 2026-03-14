@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { Heart, MoveDown } from 'lucide-react';
-import Button from "./Button.tsx"
+import Button from "./Button"
 const Hero = () => {
   const heroRef = useRef(null);
   useEffect(() => {

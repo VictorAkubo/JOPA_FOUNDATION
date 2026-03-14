@@ -23,7 +23,7 @@ const essentials = [
 ];
 
   return (
-    <section className="py-24 bg-[#05070a] border-y border-white/5">
+    <section id="impact" className="py-24 bg-[#05070a] border-y border-white/5">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6">
           <span className="w-1 h-1 rounded-full bg-orange-500" />

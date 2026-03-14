@@ -91,7 +91,6 @@ const CoreValues = () => {
                 basic nourishment and support.
               </p>
             </div>
-
           </div>
         </div>
       </div>
