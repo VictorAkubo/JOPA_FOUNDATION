@@ -39,29 +39,29 @@ const ExecutiveBoard = () => {
       desc: "Directing community growth and ensuring every mission reaches its heart.",
       image: "/omojomember.jpg" 
     },
-            { 
-      role: "Vice President", 
-      name: "Unekwu Faith Atumeyi", 
-      desc: "Directing community growth and ensuring every mission reaches its heart.",
-      image: "/unekwumember.jpg" 
-    },
     { 
-      role: "Visionary Leader", 
-      name: "Jemimah Akubo", 
-      desc: "Visionary leader dedicated to touching lives through strategic philanthropy.",
-      image: "/memmamember.jpg" 
-    },
-        { 
-      role: "Financial Secretary", 
+      role: "Secretary", 
       name: "Onuche Angel Egbunu", 
       desc: "Upholding the pillar of transparency and trust in every shared gift.",
       image: "/angelmember.jpg" 
     },
-    { 
-      role: "Financial Secretary", 
+     { 
+      role: "Treasurer", 
       name: "Faith Ojochegbe Akubo", 
       desc: "Upholding the pillar of transparency and trust in every shared gift.",
       image: "/faithmember.jpg" 
+    },
+         { 
+      role: "Location Organizer", 
+      name: "Iko-Ojo Blessing Adejoh", 
+      desc: "Upholding the pillar of transparency and trust in every shared gift.",
+      image: "/faithmember.jpg" 
+    },
+    { 
+      role: "Member", 
+      name: "Jemimah Akubo", 
+      desc: "Visionary leader dedicated to touching lives through strategic philanthropy.",
+      image: "/memmamember.jpg" 
     },
         { 
       role: "Member", 
@@ -69,14 +69,25 @@ const ExecutiveBoard = () => {
       desc: "Upholding the pillar of transparency and trust in every shared gift.",
       image: "/membervictoria.jpg" 
     },
+    
       { 
       role: "Member", 
       name: "James Olubo Yenusa", 
       desc: "Upholding the pillar of transparency and trust in every shared gift.",
       image: "/olubomember.jpg" 
     },
-    
-    
+                { 
+      role: "Member", 
+      name: "Unekwu Faith Atumeyi", 
+      desc: "Directing community growth and ensuring every mission reaches its heart.",
+      image: "/unekwumember.jpg" 
+    },
+    { 
+      role: "Member", 
+      name: "Faith Ojo-Chegbe Itanyi", 
+      desc: "Upholding the pillar of transparency and trust in every shared gift.",
+      image: "/faithmember.jpg" 
+    },
   ];
 
   return (

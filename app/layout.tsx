@@ -2,7 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import React from "react"
-import ContextProvider from "../context/donate.tsx"
+import Navbar from "../components/Navbar.tsx"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,10 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex bg-white h-full`}>
-        <ContextProvider>
-          {children}
-        </ContextProvider>
+      <body className={`${inter.className} flex-col gap-10 h-full bg-[#05070a]/80`}>
+          <Navbar/>
+          <div className="pt-11">
+             {children}  
+          </div>
+       
       </body>
     </html>
   )

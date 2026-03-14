@@ -8,8 +8,8 @@ const Hero = () => {
     const ctx = gsap.context(() => {
       gsap.from(".hero-fade", { 
         opacity: 0, 
-        y: 20, 
-        duration: 1.4, 
+        y: 10, 
+        duration: 0.5, 
         stagger: 0.3, 
         ease: "power2.out" 
       });

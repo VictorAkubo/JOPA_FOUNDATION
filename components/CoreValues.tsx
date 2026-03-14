@@ -24,7 +24,7 @@ const CoreValues = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="py-32 bg-[#05070a] text-white relative overflow-hidden">
+    <section id="about" ref={containerRef} className="py-32 bg-[#05070a] text-white relative overflow-hidden">
       {/* Decorative Blur */}
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-orange-900/5 rounded-full blur-[120px] pointer-events-none" />
 

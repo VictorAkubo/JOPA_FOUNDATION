@@ -20,7 +20,7 @@ const Invitation = () => {
           <p className="text-slate-400 text-lg max-w-xl mx-auto mb-12 font-light">
             Whether through volunteering or support, your kindness ensures that the spirit of sharing love continues to grow.
           </p>
-          <a href={mailtoUrlForPartnership} className="px-12 py-5 bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-full transition-all hover:scale-105 shadow-xl shadow-orange-900/20">
+          <a href={mailtoUrlForPartnership} className="px-6 py-5 bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-full transition-all shadow-xl shadow-orange-900/20">
             Become a Partner
           </a>
         </div>

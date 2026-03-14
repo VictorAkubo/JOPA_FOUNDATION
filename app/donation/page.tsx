@@ -1,11 +1,9 @@
 "use client"
 import React, { useState,useContext } from 'react';
+import Link from "next/link"
 import { Landmark, CreditCard, Copy, Check, Heart,ArrowLeft } from 'lucide-react';
-import {ButtonContext} from "../context/donate.tsx"
-
 const DonationPortal = () => {
   const [copied, setCopied] = useState(false);
-  const {active,setActive} = useContext(ButtonContext)
   const [paymentMethod, setPaymentMethod] = useState<'transfer' | 'online'>('transfer');
 
   const accountDetails = {
@@ -23,10 +21,10 @@ const DonationPortal = () => {
   return (
     <section className="z-20 max-w-full max-h-full py-14 bg-[#05070a] text-white">
       <div className="max-w-4xl mx-auto px-6">
-        <span onClick={()=>setActive(!active)} className="flex items-center gap-3 text-orange-500 mb-10">
+        <Link href="/" className="flex items-center gap-3 text-orange-500 mb-10">
           <ArrowLeft className="text-orange-500"/>
           <span className="">Back</span>
-        </span>
+        </Link>
         {/* Header */}
         <div className="text-center mb-16">
           <Heart size={32} className="text-orange-500 mx-auto mb-6" fill="currentColor" />

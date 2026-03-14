@@ -1,6 +1,5 @@
 "use client"
-import React, { useState, useEffect ,useContext} from 'react';
-import {ButtonContext} from "../context/donate.tsx"
+import React, { useState, useEffect } from 'react';
 import Hero from '../components/Hero';
 import ExecutiveBoard from '../components/ExecutiveBoard';
 import PhilanthropyGallery from '../components/PhilanthropyGallery';
@@ -10,21 +9,16 @@ import LettersOfHope from '../components/LettersOfHope';
 import CoreValues from '../components/CoreValues';
 
 import HowYouCanHelp from '../components/HowYouCanHelp';
-import DonationPortal from "../components/DonationPortal.tsx"
 
  import Footer from '../components/Footer'; 
  
 
 const Home = () => {
-  const {active,setActive} = useContext(ButtonContext)
   const [currentView, setCurrentView] = useState('home');
 
   return ( 
   <>
-    {active ? (
-    <DonationPortal/>
-    ) : (
-        <div className="relative w-full min-h-screen bg-white selection:bg-blue-100">
+      <div className="relative w-full min-h-screen bg-[#05070a]/80 ">
       <Hero />
       <ExecutiveBoard />
       <CoreValues/>
@@ -46,7 +40,6 @@ const Home = () => {
       </main>
        <Footer /> 
     </div>
-  ) }
   </>
   )
 };
