@@ -2,8 +2,8 @@ import React from "react";
 import { Heart, Handshake, Users, ArrowRight } from "lucide-react";
 import EmailLink from "./Button.tsx"
 import Button from "./Button.tsx"
+
 const HowYouCanHelp = () => {
-  
   const email = "jopafoundation1@gmail.com";
   const subject2 = "Partner";
   const subject1 = "Volunteer";
@@ -20,7 +20,7 @@ const HowYouCanHelp = () => {
       name: "Donate",
       icon: <Heart size={24} className="text-orange-500" fill="currentColor" />,
       desc: "Your financial support helps us purchase and distribute food items to widows, vulnerable families, and fatherless children.",
-      button:<Button/>
+      button:<Button state=""/>
       
     },
     {

@@ -2,10 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { Heart, MoveDown } from 'lucide-react';
 import Button from "./Button.tsx"
-
 const Hero = () => {
   const heroRef = useRef(null);
-
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from(".hero-fade", { 
