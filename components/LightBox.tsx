@@ -2,7 +2,20 @@ import React, { useEffect, useRef, useState } from 'react';
 import { X, MapPin, Heart, ChevronLeft, ChevronRight } from 'lucide-react';
 import { gsap } from 'gsap';
 
-const LightBox = ({ data, onClose }:{data:{},onClose:()=>void}) => {
+type StoryData = {
+  images: string[];
+  title: string;
+  location: string;
+  story: string;
+  initialImage?: string; // marked as optional with ?
+};
+
+type LightBoxProps = {
+  data: StoryData;
+  onClose: () => void;
+};
+
+const LightBox = ({ data, onClose }:LightBoxProps) => {
   const modalRef = useRef(null);
   const carouselRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
