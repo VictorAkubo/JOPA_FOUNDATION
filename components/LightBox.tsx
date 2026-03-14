@@ -29,8 +29,9 @@ const LightBox = ({ data, onClose }: LightBoxProps) => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.fromTo(".modal-backdrop", { opacity: 0 }, { opacity: 1, duration: 0.5 });
-      gsap.fromTo(".modal-content", 
+      gsap.fromTo(".modal-backdrop", { opacity: 0 }
+        , { opacity: 1, duration: 0.5 });
+      gsap.fromTo(".modal-content",
         { scale: 0.9, opacity: 0, y: 30 }, 
         { scale: 1, opacity: 1, y: 0, duration: 0.7, ease: "power4.out" }
       );
