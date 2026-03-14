@@ -6,7 +6,9 @@ import PhilanthropyGallery from '../components/PhilanthropyGallery';
 import SimplePantry from '../components/SimplePantry';
 import Invitation from '../components/Invitation';
 import LettersOfHope from '../components/LettersOfHope';
+import CoreValues from '../components/CoreValues';
 
+import HowYouCanHelp from '../components/HowYouCanHelp';
 
 
  import Footer from '../components/Footer'; 
@@ -21,14 +23,17 @@ const Home = () => {
       
       {/* 1. HERO SECTION: Positioned at the top */}
       <Hero />
+      <ExecutiveBoard />
+      <CoreValues/>
       <SimplePantry/>
+      <HowYouCanHelp/>
 
       {/* 2. NGO CONTENT: Positioned sequentially underneath */}
       <main>
         {currentView === 'home' && (
           <>
             {/* The sliding board component lives here */}
-            <ExecutiveBoard />
+
             
             {/* You can add more components like 'About' or 'Mission' here */}
           </>

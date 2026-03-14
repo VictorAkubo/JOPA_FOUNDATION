@@ -1,24 +1,26 @@
 import React from 'react';
-import { Package, Droplet, Wheat } from 'lucide-react';
+import { HandHeart, Users, MapPin } from "lucide-react";
 
 const SimplePantry = () => {
-  const essentials = [
-    { 
-      name: "Grains of Hope", 
-      icon: <Wheat className="text-orange-500/80" strokeWidth={1.5} />, 
-      desc: "The heart of every meal, shared to ensure no table is left empty." 
-    },
-    { 
-      name: "Life’s Essentials", 
-      icon: <Droplet className="text-orange-500/80" strokeWidth={1.5} />, 
-      desc: "Providing the basic elements that bring nourishment and health to the home." 
-    },
-    { 
-      name: "The Shared Basket", 
-      icon: <Package className="text-orange-500/80" strokeWidth={1.5} />, 
-      desc: "A collection of humble ingredients gathered with love for our neighbors." 
-    }
-  ];
+  
+
+const essentials = [
+  { 
+    name: "Food Distribution", 
+    icon: <HandHeart className="text-orange-500/80" strokeWidth={1.5} />, 
+    desc: "We organize outreach programs where food items are distributed to widows, vulnerable families, and fatherless children." 
+  },
+  { 
+    name: "Community Support", 
+    icon: <Users className="text-orange-500/80" strokeWidth={1.5} />, 
+    desc: "We provide basic food supplies to households struggling with poverty and food insecurity." 
+  },
+  { 
+    name: "Compassion Outreach", 
+    icon: <MapPin className="text-orange-500/80" strokeWidth={1.5} />, 
+    desc: "We connect with communities to identify those most in need and ensure they receive support." 
+  }
+];
 
   return (
     <section className="py-24 bg-[#05070a] border-y border-white/5">
@@ -29,7 +31,7 @@ const SimplePantry = () => {
         </div>
         
         <h2 className="text-3xl md:text-5xl font-light text-white mb-16 tracking-tight">
-          Sharing the <span className="font-serif italic text-slate-500">essentials of life.</span>
+         What We Do <span className="font-serif italic text-slate-500">Providing support and hope to those in need.</span>
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">

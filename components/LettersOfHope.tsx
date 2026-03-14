@@ -13,7 +13,7 @@ const LettersOfHope = () => {
         </blockquote>
         <div className="h-[1px] w-12 bg-orange-600/50 mx-auto mb-6" />
         <cite className="text-sm uppercase tracking-[0.3em] text-slate-500 font-bold not-italic">
-          — A Mother in Lagos
+          — A Mother in Idah
         </cite>
       </div>
     </section>

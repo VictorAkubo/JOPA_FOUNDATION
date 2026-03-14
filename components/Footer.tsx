@@ -33,7 +33,7 @@ const Footer = () => {
                   <MapPin size={18} />
                 </div>
                 <span className="text-slate-400 text-sm leading-relaxed group-hover:text-white transition-colors">
-                  Lagos, Nigeria
+                  Niger, Nigeria
                 </span>
               </li>
               <li className="flex items-center gap-4 group cursor-pointer">
@@ -41,7 +41,7 @@ const Footer = () => {
                   <Mail size={18} />
                 </div>
                 <span className="text-slate-400 text-sm group-hover:text-white transition-colors">
-                  hello@jopafoundation.org
+                  jopafoundation1@gmail.com
                 </span>
               </li>
               <li className="flex items-center gap-4 group cursor-pointer">
@@ -49,7 +49,7 @@ const Footer = () => {
                   <Phone size={18} />
                 </div>
                 <span className="text-slate-400 text-sm group-hover:text-white transition-colors">
-                  +234 (0) 800 JOPA LOVE
+                  +234 (0) 8069-230-0929 JOPA LOVE
                 </span>
               </li>
             </ul>

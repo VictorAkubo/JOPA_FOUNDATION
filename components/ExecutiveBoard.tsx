@@ -31,20 +31,52 @@ const ExecutiveBoard = () => {
       role: "President", 
       name: "Ojonugwa Julius Akubo", 
       desc: "Visionary leader dedicated to touching lives through strategic philanthropy.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop" 
+      image: "/president.jpg" 
+    },
+        { 
+      role: "Vice President", 
+      name: "Ochuma Omojo Esther", 
+      desc: "Directing community growth and ensuring every mission reaches its heart.",
+      image: "/omojomember.jpg" 
+    },
+            { 
+      role: "Vice President", 
+      name: "Unekwu Faith Atumeyi", 
+      desc: "Directing community growth and ensuring every mission reaches its heart.",
+      image: "/unekwumember.jpg" 
     },
     { 
-      role: "Vice President", 
-      name: "Executive Director", 
-      desc: "Directing community growth and ensuring every mission reaches its heart.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop" 
+      role: "Visionary Leader", 
+      name: "Jemimah Akubo", 
+      desc: "Visionary leader dedicated to touching lives through strategic philanthropy.",
+      image: "/memmamember.jpg" 
+    },
+        { 
+      role: "Financial Secretary", 
+      name: "Onuche Angel Egbunu", 
+      desc: "Upholding the pillar of transparency and trust in every shared gift.",
+      image: "/angelmember.jpg" 
     },
     { 
       role: "Financial Secretary", 
-      name: "Strategy Lead", 
+      name: "Faith Ojochegbe Akubo", 
       desc: "Upholding the pillar of transparency and trust in every shared gift.",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop" 
+      image: "/faithmember.jpg" 
     },
+        { 
+      role: "Member", 
+      name: "Victoria Enyo-ojo Akubo", 
+      desc: "Upholding the pillar of transparency and trust in every shared gift.",
+      image: "/membervictoria.jpg" 
+    },
+      { 
+      role: "Member", 
+      name: "James Olubo Yenusa", 
+      desc: "Upholding the pillar of transparency and trust in every shared gift.",
+      image: "/olubomember.jpg" 
+    },
+    
+    
   ];
 
   return (

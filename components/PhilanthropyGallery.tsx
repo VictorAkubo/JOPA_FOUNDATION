@@ -69,7 +69,7 @@ const PhilanthropyGallery = () => {
             </h2>
           </div>
           <p className="text-slate-400 max-w-sm border-l-2 border-orange-600 pl-6 py-2 leading-relaxed text-left">
-            We believe that every family deserves a full kitchen. We share essentials to touch lives and support home-cooked memories.
+            We believe every family deserves food on their table. We provide essential groceries to widows, the poor, and the fatherless so families can eat together.
           </p>
         </div>
 
