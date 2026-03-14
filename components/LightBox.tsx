@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { X, MapPin, Heart, ChevronLeft, ChevronRight } from 'lucide-react';
 import { gsap } from 'gsap';
 
-const LightBox = ({ data, onClose }:{data:{}}) => {
+const LightBox = ({ data, onClose }:{data:{},onClose:()=>void}) => {
   const modalRef = useRef(null);
   const carouselRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
