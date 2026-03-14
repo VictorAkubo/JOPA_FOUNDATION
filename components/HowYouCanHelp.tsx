@@ -20,7 +20,7 @@ const HowYouCanHelp = () => {
       name: "Donate",
       icon: <Heart size={24} className="text-orange-500" fill="currentColor" />,
       desc: "Your financial support helps us purchase and distribute food items to widows, vulnerable families, and fatherless children.",
-      button:<Button state=""/>
+      button:<Button/>
       
     },
     {
