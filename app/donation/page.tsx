@@ -19,7 +19,7 @@ const DonationPortal = () => {
   };
 
   return (
-    <section className="z-20 max-w-full max-h-full py-14 bg-[#05070a] text-white">
+    <section className="z-20 max-w-full max-h-full md:h-screen py-14 bg-[#05070a] text-white">
       <div className="max-w-4xl mx-auto px-6">
         <Link href="/" className="flex items-center gap-3 text-orange-500 mb-10">
           <ArrowLeft className="text-orange-500"/>
@@ -100,7 +100,7 @@ const DonationPortal = () => {
                 Securely donate using your card, USSD, or mobile money via Flutterwave.
               </p>
               
-              <button 
+              <a href="https://flutterwave.com/donate/devfyrakxtty"
                 className="w-full max-w-xs py-5 bg-orange-600 hover:bg-orange-700 text-white font-black rounded-full transition-all hover:scale-105 shadow-xl shadow-orange-900/20 uppercase tracking-widest text-sm"
                 onClick={() => {
                   // Integration logic for Flutterwave would go here
@@ -108,7 +108,7 @@ const DonationPortal = () => {
                 }}
               >
                 Donate Now
-              </button>
+              </a>
               
               <p className="mt-6 text-[10px] text-slate-600 font-bold uppercase tracking-[0.2em]">
                 Securely Processed by Flutterwave
