@@ -7,7 +7,7 @@ const DonationPortal = () => {
   const [paymentMethod, setPaymentMethod] = useState<'transfer' | 'online'>('transfer');
 
   const accountDetails = {
-    bank: "Zenith Bank",
+    bank: "UBA",
     accountName: "Julius Ojonugwa Paul Akubo Foundation",
     accountNumber: "1228495032"
   };
