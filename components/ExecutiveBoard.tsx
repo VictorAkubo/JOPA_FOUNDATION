@@ -59,7 +59,7 @@ const ExecutiveBoard = () => {
     },
     { 
       role: "Member", 
-      name: "Jemimah Apalawee Akubo", 
+      name: "Jemimah Ojonugwa Akubo", 
       desc: "Visionary leader dedicated to touching lives through strategic philanthropy.",
       image: "/memmamember.jpg" 
     },
