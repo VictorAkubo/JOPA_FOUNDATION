@@ -1,30 +1,15 @@
 "use client"
-import React, { useState,useContext ,useRef} from 'react';
-import Link from "next/link"
-import { Landmark, CreditCard, Copy, Check,ArrowLeft, Heart, ArrowRight, Share2, X, 
-  Download, Instagram, Twitter, MessageCircle, Loader2 } from 'lucide-react';
+import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Check, Heart, ArrowRight, Share2, X, 
+  Download, Instagram, Twitter, MessageCircle, Loader2 
+} from 'lucide-react';
 import * as htmlToImage from 'html-to-image';
-const DonationPortal = () => {
-  const [copied, setCopied] = useState(false);
+
+const PaymentSuccess = () => {
   const [showShareModal, setShowShareModal] = useState(false);
   const [isDownloading, setIsDownloading] = useState(false);
-  const [paymentMethod, setPaymentMethod] = useState<'transfer' | 'online'>('transfer');
-
-  const accountDetails = {
-    bank: "UBA",
-    accountName: "Julius Ojonugwa Paul Akubo Foundation",
-    accountNumber: "1228495032"
-  };
-
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(accountDetails.accountNumber);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-  
-  
-  
 
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -73,84 +58,78 @@ const DonationPortal = () => {
     }
   };
 
-
   return (
-    <section className="z-20 max-w-full max-h-full md:h-screen py-14 bg-[#05070a] text-white">
-      <div className="max-w-4xl mx-auto px-6">
-        <Link href="/" className="flex items-center gap-3 text-orange-500 mb-10">
-          <ArrowLeft className="text-orange-500"/>
-          <span className="">Back</span>
-        </Link>
-        {/* Header */}
-        <div className="text-center mb-16">
-          <Heart size={32} className="text-orange-500 mx-auto mb-6" fill="currentColor" />
-          <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-4">Extend Your Heart</h2>
-          <p className="text-slate-500 font-light">Choose the method that is most convenient for you.</p>
-        </div>
+    <div className="min-h-screen bg-[#0A0A0A] text-white flex flex-col items-center justify-center p-6 font-sans relative overflow-hidden">
+      
+      {/* --- Main Success Card --- */}
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="w-full max-w-md bg-[#161616] border border-white/10 rounded-[2.5rem] p-8 text-center relative z-10 shadow-2xl"
+      >
+        <div className="absolute -top-24 -left-24 w-48 h-48 bg-[#FF4D00]/10 blur-[80px] rounded-full" />
+        
+        <motion.div 
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
+          className="w-20 h-20 bg-[#FF4D00] rounded-full flex items-center justify-center mx-auto mb-6 shadow-[0_0_30px_rgba(255,77,0,0.4)]"
+        >
+          <Check size={40} strokeWidth={3} className="text-white" />
+        </motion.div>
 
-        {/* Toggle Switch */}
-        <div className="flex justify-center mb-12">
-          <div className="inline-flex p-1 bg-white/5 border border-white/10 rounded-2xl">
-            <button 
-              onClick={() => setPaymentMethod('transfer')}
-              className={`flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold transition-all ${
-                paymentMethod === 'transfer' ? 'bg-orange-600 text-white shadow-lg' : 'text-slate-500 hover:text-white'
-              }`}
-            >
-              <Landmark size={18} /> Bank Transfer
-            </button>
-            <button 
-              onClick={() => setPaymentMethod('online')}
-              className={`flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold transition-all ${
-                paymentMethod === 'online' ? 'bg-orange-600 text-white shadow-lg' : 'text-slate-500 hover:text-white'
-              }`}
-            >
-              <CreditCard size={18} /> Online Payment
-            </button>
+        <h1 className="text-3xl font-black tracking-tight mb-2 uppercase italic text-white">
+          Donation Received
+        </h1>
+        
+        <p className="text-gray-400 text-lg mb-8 leading-relaxed font-medium">
+          Thank you for your heart. Your contribution directly fuels our mission.
+        </p>
+
+        <div className="bg-black/40 border border-white/5 rounded-2xl p-5 mb-8 text-left">
+          <div className="flex justify-between items-center mb-2">
+            <span className="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-bold">Status</span>
+            <span className="text-[10px] font-bold text-[#FF4D00] uppercase tracking-widest underline underline-offset-4 decoration-2">Successful</span>
+          </div>
+          <div className="flex justify-between items-center">
+            <span className="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-bold">Purpose</span>
+            <span className="text-[10px] font-bold text-white uppercase tracking-wider">General Donation</span>
           </div>
         </div>
 
-        {/* Payment Content */}
-        <div className="min-h-[300px]">
-          {paymentMethod === 'transfer' ? (
-            /* Option 1: Bank Transfer Details */
-            <div className="p-10 md:p-14 rounded-[3rem] bg-[#0a0c10] border border-white/10 text-center animate-in fade-in slide-in-from-bottom-4 duration-500">
-              <h4 className="text-xs uppercase tracking-[0.3em] text-orange-500 font-black mb-8">Direct Transfer Details</h4>
-              
-              <div className="space-y-8">
-                <div>
-                  <p className="text-slate-500 text-[10px] uppercase font-bold tracking-widest mb-1">Bank Name</p>
-                  <p className="text-2xl font-medium text-white">{accountDetails.bank}</p>
-                </div>
-                
-                <div>
-                  <p className="text-slate-500 text-[10px] uppercase font-bold tracking-widest mb-1">Account Name</p>
-                  <p className="text-xl md:text-2xl font-medium text-white">{accountDetails.accountName}</p>
-                </div>
-
-                <div className="relative group inline-block">
-                  <p className="text-slate-500 text-[10px] uppercase font-bold tracking-widest mb-1">Account Number</p>
-                  <div className="flex items-center gap-4 justify-center">
-                    <p className="text-4xl md:text-5xl font-black text-white tracking-tighter tabular-nums">
-                      {accountDetails.accountNumber}
-                    </p>
-                    <button 
-                      onClick={copyToClipboard}
-                      className="p-3 rounded-xl bg-white/5 hover:bg-orange-600 text-slate-400 hover:text-white transition-all"
-                      title="Copy Number"
-                    >
-                      {copied ? <Check size={20} /> : <Copy size={20} />}
-                    </button>
-                  </div>
-                </div>
-                                            <button 
+        <div className="space-y-4">
+          <motion.a
+            href="/"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="w-full bg-[#FF4D00] hover:bg-[#FF6A00] text-white font-black py-4 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-[#FF4D00]/20"
+          >
+            Return Home <ArrowRight size={18} />
+          </motion.a>
+          
+          <button 
             onClick={() => setShowShareModal(true)}
-            className="w-full flex items-center justify-center gap-2 text-gray-400 hover:text-white transition-colors py-2 text-sm font-bold uppercase tracking-widest mt-1"
+            className="w-full flex items-center justify-center gap-2 text-gray-400 hover:text-white transition-colors py-2 text-sm font-bold uppercase tracking-widest"
           >
             <Share2 size={16} /> Share Initiative
           </button>
-              </div>
-                  <AnimatePresence>
+        </div>
+      </motion.div>
+
+      {/* Heartfelt Footer Quote */}
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1 }}
+        className="mt-12 flex items-center gap-2 text-[#FF4D00]/60 italic"
+      >
+        <Heart size={14} fill="currentColor" />
+        <span className="text-xs tracking-[0.1em] font-medium uppercase">Small acts, Big impact.</span>
+      </motion.div>
+
+      {/* --- Share Modal Overlay --- */}
+      <AnimatePresence>
         {showShareModal && (
           <>
             <motion.div 
@@ -187,8 +166,7 @@ const DonationPortal = () => {
                    {/* Branding */}
                    <div className="absolute top-10 left-10 flex items-center gap-3">
                       <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg">
-                 <img
-                  src="/jopa.jpg" className="rounded-full z-10"/>
+                        <span className="text-[10px] font-black text-black">JOPAF</span>
                       </div>
                       <span className="text-[11px] font-black tracking-[0.2em] uppercase italic opacity-80 text-white">Foundation</span>
                    </div>
@@ -239,37 +217,8 @@ const DonationPortal = () => {
           </>
         )}
       </AnimatePresence>
-            </div>
-          ) : (
-            /* Option 2: Flutterwave Button */
-            <div className="p-10 md:p-14 rounded-[3rem] bg-[#0a0c10] border border-white/10 text-center animate-in fade-in slide-in-from-bottom-4 duration-500 flex flex-col items-center justify-center">
-              <div className="mb-8 p-6 rounded-full bg-orange-600/10 text-orange-500">
-                <CreditCard size={40} strokeWidth={1} />
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Instant Donation</h3>
-              <p className="text-slate-500 max-w-sm mb-10 font-light leading-relaxed">
-                Securely donate using your card, USSD, or mobile money via Flutterwave.
-              </p>
-              
-              <a href="https://flutterwave.com/donate/devfyrakxtty"
-                className="w-full max-w-xs py-5 bg-orange-600 hover:bg-orange-700 text-white font-black rounded-full transition-all hover:scale-105 shadow-xl shadow-orange-900/20 uppercase tracking-widest text-sm"
-                onClick={() => {
-                  // Integration logic for Flutterwave would go here
-                  console.log("Redirecting to Flutterwave...");
-                }}
-              >
-                Donate Now
-              </a>
-              
-              <p className="mt-6 text-[10px] text-slate-600 font-bold uppercase tracking-[0.2em]">
-                Securely Processed by Flutterwave
-              </p>
-            </div>
-          )}
-        </div>
-      </div>
-    </section>
+    </div>
   );
 };
 
-export default DonationPortal;
+export default PaymentSuccess;

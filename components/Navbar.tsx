@@ -2,10 +2,14 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Utensils, Menu, X } from "lucide-react";
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const currentPath = usePathname(); 
+
+  const verify = currentPath?.endsWith('/success');
 
   // Handle scroll effect for a premium feel
   useEffect(() => {
@@ -26,8 +30,7 @@ export default function Navbar() {
     { name: "Letters", href: "#hope" },
         { name: "Contact Us", href: "#footer" },
   ];
-
-  return (
+  if(!verify) return (
     <nav 
       className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${
         isScrolled 
@@ -82,5 +85,7 @@ export default function Navbar() {
         </Link>
       </div>
     </nav>
+    
   );
+  return;
 }

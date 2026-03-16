@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} flex-col gap-10 h-full bg-[#05070a]/80`}>
-          <Navbar/>
+         <Navbar/>
           <div className="pt-11">
              {children}  
           </div>
