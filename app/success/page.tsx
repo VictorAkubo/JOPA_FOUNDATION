@@ -166,7 +166,8 @@ const PaymentSuccess = () => {
                    {/* Branding */}
                    <div className="absolute top-10 left-10 flex items-center gap-3">
                       <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg">
-                        <span className="text-[10px] font-black text-black">JOPAF</span>
+                                         <img
+                  src="/jopa.jpg" className="rounded-full z-10"/>
                       </div>
                       <span className="text-[11px] font-black tracking-[0.2em] uppercase italic opacity-80 text-white">Foundation</span>
                    </div>
