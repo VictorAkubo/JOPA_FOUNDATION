@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef,useState } from 'react';
 import { gsap } from 'gsap';
 import { Heart, MoveDown } from 'lucide-react';
 import Button from "./Button"
@@ -9,12 +9,12 @@ const Hero = () => {
       gsap.from(".hero-fade", { 
         opacity: 0, 
         y: 10, 
-        duration: 0.5, 
-        stagger: 0.3, 
+        duration: 0.10, 
+        stagger: 0.2, 
         ease: "power2.out" 
       });
     }, heroRef);
-    return () => ctx.revert();
+    return () => ctx.revert()
   }, []);
 
   return (
