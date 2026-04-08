@@ -53,7 +53,7 @@ const ExecutiveBoard = () => {
     },
          { 
       role: "Location Organizer", 
-      name: "Iko-Ojo Blessing Adejoh", 
+      name: "Iko-Ojo Blessing Makoji", 
       desc: "Upholding the pillar of transparency and trust in every shared gift.",
       image: "/ikomember.jpg" 
     },
@@ -78,7 +78,7 @@ const ExecutiveBoard = () => {
     },
                 { 
       role: "Member", 
-      name: "Unekwu Faith Atumeyi", 
+      name: "Unekwu Faith Omada", 
       desc: "Directing community growth and ensuring every mission reaches its heart.",
       image: "/unekwumember.jpg" 
     },
@@ -87,6 +87,18 @@ const ExecutiveBoard = () => {
       name: "Faith Ojo-Chegbe Itanyi", 
       desc: "Upholding the pillar of transparency and trust in every shared gift.",
       image: "/faithitanyimember.jpg" 
+    },
+     { 
+      role: "Member", 
+      name: "Lydia Usman", 
+      desc: "Upholding the pillar of transparency and trust in every shared gift.",
+      image: "/lydiausman.jpg" 
+    },
+    { 
+      role: "Member", 
+      name: "Moses Achimugwu", 
+      desc: "Upholding the pillar of transparency and trust in every shared gift.",
+      image: "/mosesachimugwu.jpg" 
     },
   ];
 
