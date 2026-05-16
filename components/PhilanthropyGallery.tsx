@@ -6,21 +6,21 @@ const PhilanthropyGallery = () => {
   const [activeYear, setActiveYear] = useState('2024');
   // Handle the full story object for the LightBox
   const [selectedStory, setSelectedStory] = useState<any | null>(null);
+  const numbers = Array.from({ length: 46 }, (_, i) => i + 1);
 
-  const years = ['2020', '2021', '2022', '2023', '2024'];
+  
+
+  const years = ['2020-2025','2026'];
 
   const impactData: any = {
-    '2024': { 
+    '2020-2025': { 
         title: "Community Food Bank", 
         description: "A humble effort to share bags of rice, bottles of oil, and raw food items so families can cook with dignity at home.",
         location: "Lagos, Nigeria",
-        mainImg: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070",
+        mainImg: `/jopa/2017_2025/jopa29.jpg`,
         story: "In a quiet moment of giving, we shared more than just food. We shared a promise that no neighbor would be forgotten, touching lives through the simple warmth of a home-cooked meal.",
         items: ["Bags of Rice & Grains", "Bottles of Cooking Oil", "Essential Raw Supplies"],
-        sideImgs: [
-            "https://images.unsplash.com/photo-1594708767771-a7502209ff51?q=80&w=1000",
-            "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?q=80&w=1000"
-        ]
+        sideImgs: numbers.map(number=> `/jopa/2017_2025/jopa${number}.jpg`)
     },
     '2023': { 
         title: "Holiday Relief Outreach", 
@@ -37,7 +37,7 @@ const PhilanthropyGallery = () => {
     // Add more years following this structure...
   };
 
-  const currentData = impactData[activeYear] || impactData['2024'];
+  const currentData = impactData[activeYear] || impactData['2023'];
 
   // This function prepares the data for the swipeable LightBox
   const openImpactStory = (clickedImg: string) => {
@@ -151,7 +151,7 @@ const PhilanthropyGallery = () => {
             
             {/* Small Side Images */}
             <div className="grid grid-cols-2 gap-4">
-              {currentData.sideImgs.map((img: string, idx: number) => (
+              {currentData.sideImgs.slice(0,4).map((img: string, idx: number) => (
                 <div 
                   key={idx}
                   onClick={() => openImpactStory(img)}
